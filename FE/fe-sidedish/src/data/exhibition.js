@@ -17,7 +17,7 @@ const exhibition = {
         originalPrice: 15800,
         discountedPrice: 12640,
         image:
-          'https://sidedish.s3.ap-northeast-2.amazonaws.com/%E1%84%8B%E1%85%A9%E1%84%85%E1%85%B5+%E1%84%8C%E1%85%AE%E1%84%86%E1%85%AE%E1%86%AF%E1%84%85%E1%85%A5%E1%86%A8.png',
+          'https://sidedish.s3.ap-northeast-2.amazonaws.com/%EC%98%A4%EB%A6%AC+%EC%A3%BC%EB%AC%BC%EB%9F%AD/%E1%84%8B%E1%85%A9%E1%84%85%E1%85%B5+%E1%84%8C%E1%85%AE%E1%84%86%E1%85%AE%E1%86%AF%E1%84%85%E1%85%A5%E1%86%A8.png',
         event: ['런칭특가'],
       },
       {
@@ -27,7 +27,7 @@ const exhibition = {
         originalPrice: 28900,
         discountedPrice: 26010,
         image:
-          'https://sidedish.s3.ap-northeast-2.amazonaws.com/%E1%84%89%E1%85%A9%E1%84%80%E1%85%A1%E1%86%AF%E1%84%87%E1%85%B5%E1%84%8D%E1%85%B5%E1%86%B7.png',
+          'https://sidedish.s3.ap-northeast-2.amazonaws.com/%EC%86%8C%EA%B0%88%EB%B9%84%EC%B0%9C/%E1%84%89%E1%85%A9%E1%84%80%E1%85%A1%E1%86%AF%E1%84%87%E1%85%B5%E1%84%8D%E1%85%B5%E1%86%B7.png',
         event: ['이벤트특가'],
       },
       {
@@ -37,7 +37,7 @@ const exhibition = {
         originalPrice: 16900,
         discountedPrice: 0,
         image:
-          'https://sidedish.s3.ap-northeast-2.amazonaws.com/%E1%84%8D%E1%85%AE%E1%84%81%E1%85%AE%E1%84%86%E1%85%B5+%E1%84%92%E1%85%A1%E1%86%AB%E1%84%83%E1%85%A9%E1%86%AB.png',
+          'https://sidedish.s3.ap-northeast-2.amazonaws.com/%EC%AD%88%EA%BE%B8%EB%AF%B8+%ED%95%9C%EB%8F%88+%EC%A0%9C%EC%9C%A1/%E1%84%8D%E1%85%AE%E1%84%81%E1%85%AE%E1%84%86%E1%85%B5+%E1%84%92%E1%85%A1%E1%86%AB%E1%84%83%E1%85%A9%E1%86%AB.png',
         event: 26010,
       },
     ],

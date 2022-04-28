@@ -1,6 +1,7 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import * as S from './Card.style';
 import { CARD_SIZE } from '../../constants/card';
+import { MODAL_ACTION_CLOSE } from '../../constants/productDetailModal';
 import Badges from './Badges';
 import DeliveryBadge from './DeliveryBadge';
 import Prices from './Prices';
@@ -10,25 +11,20 @@ import productDetail from '../../data/productDetail';
 const Card = ({ cardSize, dish }) => {
   const { menuName, description, image, originalPrice, saledPrice, event } = dish;
 
-  const modalRef = useRef(null);
+  const [isOpenProductModal, setIsOpenProductModal] = useState(false);
 
-  const [isOpenModal, setIsOpenModal] = useState(false);
-  const toggleModal = e => {
-    (isOpenModal && e.target === modalRef.current) && setIsOpenModal(false);
-    !isOpenModal && setIsOpenModal(true);
-  };
+  const openProductModal = e => setIsOpenProductModal(true);
+
+  const closeProductModal = e =>
+    e.target.dataset.action === MODAL_ACTION_CLOSE && setIsOpenProductModal(false);
 
   return (
     <>
-      {isOpenModal && (
-        <ProductDetailModal
-          productDetail={productDetail}
-          toggleModal={toggleModal}
-          modalRef={modalRef}
-        />
+      {isOpenProductModal && (
+        <ProductDetailModal productDetail={productDetail} closeProductModal={closeProductModal} />
       )}
 
-      <S.Container onClick={toggleModal}>
+      <S.Container onClick={openProductModal}>
         <S.ImageContainer>
           <S.Image src={image} alt={menuName} cardSize={`${cardSize}`} />
           <DeliveryBadge>
