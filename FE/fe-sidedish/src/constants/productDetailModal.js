@@ -2,6 +2,8 @@ export const PORTAL_WRAPPER_ID = 'portal';
 
 export const AMOUNT_UNIT = 1;
 
+export const MODAL_ACTION_CLOSE = 'closeProductModal';
+
 export const DELIVERY = {
   BASIC_FEE: 2500,
   FREE_FEE: 0,

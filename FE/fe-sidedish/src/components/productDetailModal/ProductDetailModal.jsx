@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as S from './ProductDetailModal.style';
 
-import { COLOR, LINE_SIZE } from '../../constants/productDetailModal';
+import { COLOR, LINE_SIZE, MODAL_ACTION_CLOSE } from '../../constants/productDetailModal';
 import { CARD_SIZE } from '../../constants/card';
 import { MODAL_TYPE } from '../../constants/portal';
 import { dish10 } from '../../data/dishes';
@@ -13,8 +13,7 @@ import ProductOrder from './ProductOrder';
 import Category from '../category/Category';
 import AlertModal from '../modal/AlertModal';
 
-const ProductDetailModal = ({ productDetail, toggleModal, modalRef }) => {
-
+const ProductDetailModal = ({ productDetail, closeProductModal }) => {
   const [isAlertModalOpen, setIsAlertModalOpen] = useState(false);
 
   const { orderable, images, menuName, originalPrice, discountedPrice, point, event } =
@@ -23,9 +22,11 @@ const ProductDetailModal = ({ productDetail, toggleModal, modalRef }) => {
   const openAlertModal = () => setIsAlertModalOpen(true);
 
   return (
-    <Portal type={MODAL_TYPE.PRODUCT} toggleModal={toggleModal} modalRef={modalRef}>
+    <Portal action={MODAL_ACTION_CLOSE} closeModal={closeProductModal} type={MODAL_TYPE.PRODUCT}>
       <S.Modal>
-        <S.CloseButton onClick={toggleModal}>닫기</S.CloseButton>
+        <S.CloseButton onClick={closeProductModal} data-action={MODAL_ACTION_CLOSE}>
+          닫기
+        </S.CloseButton>
         <S.ProductDetailContainer>
           <ProductImages images={images} />
           <ProductInfo
