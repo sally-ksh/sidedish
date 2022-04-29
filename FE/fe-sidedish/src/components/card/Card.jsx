@@ -13,7 +13,7 @@ const Card = ({ cardSize, dish }) => {
 
   const [isOpenProductModal, setIsOpenProductModal] = useState(false);
 
-  const openProductModal = e => setIsOpenProductModal(true);
+  const openProductModal = () => setIsOpenProductModal(true);
 
   const closeProductModal = e =>
     e.target.dataset.action === MODAL_ACTION_CLOSE && setIsOpenProductModal(false);
